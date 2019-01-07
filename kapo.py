@@ -137,7 +137,7 @@ async def pin(ctx,*args):
              pass_context = True)
 async def eight_ball(ctx,*args):
     possible_responses = [ 'Me tipota', 'mh mou zalizeis tis mpales', 'Einai arketa pithano filtate',
-                          'Den gnwrizw', 'Paizetai']
+                          'Den gnwrizw', 'Paizetai', 'Einai vevaio', 'OXI']
 
     if args[-1].endswith('?') or args[-1].endswith(';'):
         await ctx.send(random.choice(possible_responses) + ' ' + ctx.message.author.mention)
