@@ -150,6 +150,6 @@ async def flip(ctx):
     await ctx.send(random.choice(result))
 
 
-token = 'NTAwODAzNTk5MTgyMzMxOTE1.DqQKIw.hO6rhfwAst-Yrv_Yg_SMCZeiN_8'
+TOKEN = os.environ['token']
 
-bot.run(token)
+bot.run(TOKEN)
