@@ -151,5 +151,5 @@ async def flip(ctx):
 
 
 TOKEN = os.environ['token']
-ss
+
 bot.run(TOKEN)
