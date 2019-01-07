@@ -1,1 +1,1 @@
-worker: python3 kapo.py
+worker: py kapo.py
