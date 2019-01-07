@@ -3,3 +3,4 @@ pip
 youtube_dl
 requests
 bs4
+lxml
