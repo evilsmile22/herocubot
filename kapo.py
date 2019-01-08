@@ -126,8 +126,7 @@ async def youtube(ctx,*args):
              aliases = ['eight_ball', 'eightball', '8-ball', '8mpalo'],
              pass_context = True)
 async def eight_ball(ctx,*args):
-    possible_responses = [ 'Me tipota', 'mh mou zalizeis tis mpales', 'Einai arketa pithano filtate',
-                          'Den gnwrizw', 'Paizetai', 'Einai vevaio', 'OXI']
+    possible_responses = [ 'nai', 'oxi', 'ante gamisou', 'skase', 'mporei']
 
     if args[-1].endswith('?') or args[-1].endswith(';'):
         await ctx.send(random.choice(possible_responses) + ' ' + ctx.message.author.mention)
