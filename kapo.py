@@ -139,6 +139,9 @@ async def flip(ctx):
     result = ['<:tails:515707401291300864>', '<:heads:515707373596442624>']
     await ctx.send(random.choice(result))
 
+@bot.command(name='eqtelestis', aliases=['εκτελεστης', 'τετελην', 'τετελιν', 'τετ', 'ektelestis', 'tetelin', 'tete', 'tet'])
+async def eqtelestis(ctx):
+    await ctx.send('MOUNOPANO')
 
 TOKEN = os.environ['token']
 api_key = os.environ['googleapi']
