@@ -133,10 +133,10 @@ async def eight_ball(ctx,*args):
     else:
         await ctx.send('rwta kati pousth')
 
-@bot.command(name='flip', description='flips a coin')
-async def flip(ctx):
-    result = ['<:tails:515707401291300864>', '<:heads:515707373596442624>']
-    await ctx.send(random.choice(result))
+#@bot.command(name='flip', description='flips a coin')
+#async def flip(ctx):
+#    result = ['<:tails:515707401291300864>', '<:heads:515707373596442624>']
+#    await ctx.send(random.choice(result))
 
 @bot.command(name='eqtelestis', aliases=['εκτελεστης', 'τετελην', 'τετελιν', 'τετ', 'ektelestis', 'tetelin', 'tete', 'tet'])
 async def eqtelestis(ctx):
