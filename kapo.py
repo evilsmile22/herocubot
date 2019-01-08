@@ -5,8 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import os
-import youtube_dl
-
+from googleapiclient.discovery import build
 import unicodedata,string
 
 client = discord.Client(max_messages=10000)
@@ -125,9 +124,16 @@ async def roll(ctx):
 
 
 
-@bot.command()
-async def pin(ctx,*args):
-    file = open('pin.txt','w')
+@bot.command(name='yt', descriptpion='first youtube result',
+             aliases = ['youtube'], pass_context = True)
+async def youtube(ctx,*args):
+    x = ' '.join(x for x in args)
+    youtube = build('youtube', 'v3', developerKey=api_key)
+    req = youtube.search().list(order='relevance', q=x, part='snippet')
+    res = req.execute()
+    await ctx.send('https://www.youtube.com/watch?v='+ res['items'][0]['id']['videoId'])
+
+
 
 
 
@@ -151,5 +157,6 @@ async def flip(ctx):
 
 
 TOKEN = os.environ['token']
+api_key = os.environ['googleapi']
 
 bot.run(TOKEN)
