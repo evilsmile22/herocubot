@@ -41,22 +41,6 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send(f'hello there, {ctx.author.mention}')
 
-@bot.command(pass_context=True)
-async def yt(self, ctx, *, url):
-    """Plays from a url (almost anything youtube_dl supports)"""
-
-    async with ctx.typing():
-        player = await YTDLSource.from_url(url, loop=self.bot.loop)
-        ctx.voice_client.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
-
-    await ctx.send('Now playing: {}'.format(player.title))
-
-
-
-    vc = await discord.VoiceChannel.connect
-
-    player = await vc.create_ytdl_player(url)
-    player.start()
 
 @bot.command(name='slang', description='!slang or !slang random or !slang [word]', aliases=['σλανγ'])
 async def slang(ctx,*args):
