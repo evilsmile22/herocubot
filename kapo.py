@@ -42,7 +42,7 @@ async def hello(ctx):
     await ctx.send(f'hello there, {ctx.author.mention}')
 
 
-@bot.command(name='slang', description='!slang or !slang random or !slang [word]', aliases=['σλανγ'])
+@bot.command(name='slang',brief='random slang', description='!slang or !slang random or !slang [word]', aliases=['σλανγ'])
 async def slang(ctx,*args):
 
     x = ' '.join(x for x in args)
@@ -96,7 +96,7 @@ async def slang(ctx,*args):
 
 
 
-@bot.command(name='roll', description='rolls 1-100')
+@bot.command(name='roll',brief='rolls 1-100', description='rolls 1-100')
 async def roll(ctx):
     x = random.randint(1,100)
     if x == 0:
@@ -108,7 +108,7 @@ async def roll(ctx):
 
 
 
-@bot.command(name='yt', descriptpion='first youtube result',
+@bot.command(name='yt',brief="yt + song query", descriptpion='first youtube result',
              aliases = ['youtube'], pass_context = True)
 async def youtube(ctx,*args):
     x = ' '.join(x for x in args)
