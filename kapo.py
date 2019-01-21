@@ -109,7 +109,7 @@ async def roll(ctx):
 
 
 @bot.command(name='yt',brief="yt + song query", descriptpion='first youtube result',
-             aliases = ['youtube'], pass_context = True)
+             aliases = ['youtube', 'play'], pass_context = True)
 async def youtube(ctx,*args):
     x = ' '.join(x for x in args)
     youtube = build('youtube', 'v3', developerKey=api_key)
